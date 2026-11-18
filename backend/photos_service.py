@@ -1,0 +1,11 @@
+# Backward compatibility alias - proxies to backend.services.photos_service & demo_service
+from .services.photos_service import photos_service
+from .services.demo_service import demo_service
+
+create_picker_session = photos_service.create_picker_session
+poll_and_fetch_picker_photos = photos_service.poll_and_fetch_picker_photos
+save_uploaded_photo = photos_service.save_uploaded_photo
+fetch_photos_from_google = photos_service.fetch_photos_from_google
+process_thumbnails_and_hashes = photos_service.process_thumbnails_and_hashes
+create_synthetic_image = demo_service.create_synthetic_image
+seed_demo_data = demo_service.seed_demo_data
